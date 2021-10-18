@@ -17,41 +17,45 @@ const Chart = ({ barsData, chartType }) => {
       {/* Bars Chart */}
       {
         chartType === 'bars' &&
-        <Bar
-          data={barsData}
-          options={{
-            plugins: {
-              title: {
-                display: true,
-                text: "Barras"
-              },
-              legend: {
-                display: true,
-                position: "bottom"
-             }
-            }
-          }}
-        />
+        <div className="chart">
+          <Bar
+            data={barsData}
+            options={{
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Barras"
+                },
+                legend: {
+                  display: true,
+                  position: "bottom"
+               }
+              }
+            }}
+          />
+        </div>
       }
 
       {/* Scatter Chart */}
       {
         chartType === 'bars' &&
-        <Scatter
-          data={barsData}
-          options={{
-            plugins: {
-              title: {
-                display: true,
-                text: "Puntos"
-              },
-              legend: {
-                display: true,
-                position: "bottom"
-             }
-            }
-          }}
-        />
+        <div className="chart">
+          <Scatter
+            data={barsData}
+            options={{
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Puntos"
+                },
+                legend: {
+                  display: true,
+                  position: "bottom"
+               }
+              }
+            }}
+          />
+        </div>
       }
 
     </div>

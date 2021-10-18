@@ -1,4 +1,10 @@
 
 .Chart {
-    padding: var(--space-x2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.Chart .chart{
+    padding: var(--space);
+    width: 48%;
 }

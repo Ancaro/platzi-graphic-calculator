@@ -4,7 +4,7 @@
 
 /* Header */
 .App .header {
-  background-image: var(--platzi-primary-color);
+  background-color: var(--platzi-secondary-color);
 }
 
 /* Data Form */
@@ -15,8 +15,4 @@
 /* Chart */
 .App .chart-wrapper {
   background-color: azure;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 80%;
 }
