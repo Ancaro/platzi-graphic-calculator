@@ -3,12 +3,11 @@
 Graphic calculator made with JS/React. This project is a Platzi Master program assesment. 
 
 ## Features
-- Simple Plot:
+Plot up to 5 (x,y) points in two different charts:
+- Scatter Chart:
     - Input data is presented as individual points.
-    - As many points as you want.
 - Bar Chart:
     - Input data is presented as bars.
-    - Up to 5 bars.
 
 ## Dependencies
 You only need [npm] installed on your machine to get started. 
@@ -44,6 +43,15 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+If you want Github pages to host this app under your own domain, fork this repo or create a new one, then edit `package.json` file and add the following configuration:
+- `homepage` property with value equals to `http://{username}.github.io/{repo-name}`, where {username} is your GitHub username, and {repo-name} is the name of the GitHub repository you created.
+
+Then, to deploy the app:
+```sh
+npm run deploy
+```
+Remember to set the Github repo as a "remote" in your local git repo.
 
 ## License
 MIT
