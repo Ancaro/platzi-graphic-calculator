@@ -1,4 +1,4 @@
 
 .Chart {
-    width: 80%;
+    padding: var(--space-x2);
 }

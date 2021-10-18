@@ -1,3 +1,55 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+:root {
+
+  /* Fonts */
+  --primary-font: 'Noto Sans Mono', monospace;
+
+  /* Colors */
+  --primary-color: #00E063;
+  --neutral-color: lightgray;
+  --shadow-color: rgb(167, 167, 167);
+  --platzi-primary-color: linear-gradient(87deg,#95ca3e,#85c638);
+  --platzi-secondary-color: rgb(18, 31, 61);
+
+  /* Spaces */
+  --space: 16px;
+  --space-half: calc( var(--space) / 2 );
+  --space-x2: calc( var(--space) * 2 );
+
+  /* Shadows */
+  --shadow-1: -6px 6px 4px 0px var(--shadow-color);
+
+}
+
+body {
+  background-color: var(--neutral-color);
+  font-family: var(--primary-font);
+}
+
+.title {
+  color: var(--platzi-secondary-color);
+  font-size: var(--space-x2);
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--platzi-secondary-color);
+  font-size: var(--space);
+  font-weight: 400;
+}
+
+.text {
+  color: var(--platzi-secondary-color);
+  font-size: var(--space);
+  font-weight: 300;
+}
+
+.wrapper {
+  box-shadow: var(--shadow-1);
+  margin-bottom: var(--space-x2);
+  padding: var(--space);
 }

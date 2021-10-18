@@ -1,5 +1,22 @@
 .App {
+  padding: var(--space-x2);
+}
+
+/* Header */
+.App .header {
+  background-image: var(--platzi-primary-color);
+}
+
+/* Data Form */
+.App .data-form-wrapper {
+  background-color: azure;
+}
+
+/* Chart */
+.App .chart-wrapper {
+  background-color: azure;
   display: flex;
   justify-content: center;
-  text-align: center;
+  margin: 0 auto;
+  width: 80%;
 }

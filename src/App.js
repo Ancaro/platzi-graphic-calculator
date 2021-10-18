@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 
 // Components
 import Chart from './components/chart/Chart';
+import DataForm from './components/data-form/DataForm';
 
 // Styles
 import './App.css';
@@ -16,12 +17,10 @@ function App() {
 
   const data = {
     labels: [1.1, 2.7, 33],
-    // datasets is an array of objects where each object represents a set of data to display corresponding to the labels above. for brevity, we'll keep it at one object
     datasets: [
       {
         label: 'Popularity of colours',
         data: [55, -23, 96],
-        // you can set indiviual colors for each bar
         backgroundColor: [
           'red',
           'green',
@@ -38,10 +37,22 @@ function App() {
 
   return (
     <div className="App">
-      <Chart 
-        barsData={barsData}
-        chartType={chartType}
-      />
+      
+      <div className="header wrapper">
+        <h1 className="title">Graphic calculator</h1>
+        <h2 className="subtitle">Platzi Master assesment</h2>
+      </div>
+
+      <div className="data-form-wrapper wrapper">
+        <DataForm></DataForm>
+      </div>
+
+      <div className="chart-wrapper wrapper">
+        <Chart 
+          barsData={barsData}
+          chartType={chartType}
+        />
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ import { Bar, Scatter } from "react-chartjs-2";
 import './Chart.css'
 
 
-export const Chart = ({ barsData, chartType }) => {
+const Chart = ({ barsData, chartType }) => {
 
   return (
     <div className="Chart">
