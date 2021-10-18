@@ -9,54 +9,46 @@ import { Bar, Scatter } from "react-chartjs-2";
 import './Chart.css'
 
 
-const Chart = ({ barsData, chartType }) => {
+const Chart = ({ seriesData }) => {
 
   return (
     <div className="Chart">
 
       {/* Bars Chart */}
-      {
-        chartType === 'bars' &&
-        <div className="chart">
-          <Bar
-            data={barsData}
-            options={{
-              plugins: {
-                title: {
-                  display: true,
-                  text: "Barras"
-                },
-                legend: {
-                  display: true,
-                  position: "bottom"
-               }
+      <div className="chart">
+        <Bar
+          data={seriesData}
+          options={{
+            plugins: {
+              title: {
+                display: true,
+                text: "Barras"
+              },
+              legend: {
+                display: false,
               }
-            }}
-          />
-        </div>
-      }
+            }
+          }}
+        />
+      </div>
 
       {/* Scatter Chart */}
-      {
-        chartType === 'bars' &&
-        <div className="chart">
-          <Scatter
-            data={barsData}
-            options={{
-              plugins: {
-                title: {
-                  display: true,
-                  text: "Puntos"
-                },
-                legend: {
-                  display: true,
-                  position: "bottom"
-               }
+      <div className="chart">
+        <Scatter
+          data={seriesData}
+          options={{
+            plugins: {
+              title: {
+                display: true,
+                text: "Puntos"
+              },
+              legend: {
+                display: false,
               }
-            }}
-          />
-        </div>
-      }
+            }
+          }}
+        />
+      </div>
 
     </div>
   );

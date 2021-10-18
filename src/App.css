@@ -1,4 +1,5 @@
 .App {
+  margin-top: var(--space-x2);
   padding: var(--space-x2);
 }
 

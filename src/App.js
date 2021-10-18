@@ -12,27 +12,39 @@ import './App.css';
 
 function App() {
 
-  const [barsData, setBarsData] = useState({});
-  const [chartType, setChartType] = useState('bars');
+  const [seriesData, setSeriesData] = useState({});
+  const [series, setSeries] = useState([]);
 
-  const data = {
-    labels: [1.1, 2.7, 33, 4],
-    datasets: [
-      {
-        label: 'Popularity of colours',
-        data: [55, -23, 96, -100],
-        backgroundColor: [
-          '#95ca3e',
-          'rgb(18, 31, 61)',
-        ],
-        borderWidth: 1,
-      }
-    ]
-  }
+  // const data = {
+  //   labels: [1.1, 2.7, 33, 4],
+  //   datasets: [
+  //     {
+  //       label: 'Popularity of colours',
+  //       data: [55, -23, 96, -100],
+  //       backgroundColor: [
+  //         '#95ca3e',
+  //         'rgb(18, 31, 61)',
+  //       ],
+  //       borderWidth: 1,
+  //     }
+  //   ]
+  // }
 
   useEffect(() => {
-    setBarsData(data);
-  }, [])
+    const labels = [];
+    const data = [];
+    series.forEach(point => {
+      labels.push(point.x);
+      data.push(point.y);
+    });
+    setSeriesData({
+      labels: labels,
+      datasets: [{
+        // label: 'points',
+        data: data,
+      }],
+    });
+  }, [seriesData])
 
   return (
     <div className="App">
@@ -44,14 +56,13 @@ function App() {
 
       <div className="data-form-wrapper wrapper">
         <DataForm
-
+          onSeriesChange={new_series => setSeries(new_series)}
         />
       </div>
 
       <div className="chart-wrapper wrapper">
         <Chart 
-          barsData={barsData}
-          chartType={chartType}
+          seriesData={seriesData}
         />
       </div>
     </div>
