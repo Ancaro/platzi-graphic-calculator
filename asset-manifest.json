@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/platzi-graphic-calculator/static/css/main.15adea35.chunk.css",
+    "main.js": "/platzi-graphic-calculator/static/js/main.4e3bcc56.chunk.js",
+    "main.js.map": "/platzi-graphic-calculator/static/js/main.4e3bcc56.chunk.js.map",
+    "runtime-main.js": "/platzi-graphic-calculator/static/js/runtime-main.d640c7cd.js",
+    "runtime-main.js.map": "/platzi-graphic-calculator/static/js/runtime-main.d640c7cd.js.map",
+    "static/js/2.0b32218e.chunk.js": "/platzi-graphic-calculator/static/js/2.0b32218e.chunk.js",
+    "static/js/2.0b32218e.chunk.js.map": "/platzi-graphic-calculator/static/js/2.0b32218e.chunk.js.map",
+    "static/js/3.31f28cfb.chunk.js": "/platzi-graphic-calculator/static/js/3.31f28cfb.chunk.js",
+    "static/js/3.31f28cfb.chunk.js.map": "/platzi-graphic-calculator/static/js/3.31f28cfb.chunk.js.map",
+    "index.html": "/platzi-graphic-calculator/index.html",
+    "static/css/main.15adea35.chunk.css.map": "/platzi-graphic-calculator/static/css/main.15adea35.chunk.css.map",
+    "static/js/2.0b32218e.chunk.js.LICENSE.txt": "/platzi-graphic-calculator/static/js/2.0b32218e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d640c7cd.js",
+    "static/js/2.0b32218e.chunk.js",
+    "static/css/main.15adea35.chunk.css",
+    "static/js/main.4e3bcc56.chunk.js"
+  ]
+}
