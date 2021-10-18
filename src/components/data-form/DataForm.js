@@ -12,10 +12,13 @@ import './DataForm.css'
 const DataForm = ({ onSeriesChange }) => {
 
   const [series, setSeries] = useState([]);
-  
+  const [error, setError] = useState('');
+  const [errorTime, setErrorTime] = useState(undefined);
+
   useEffect(() => {
     if ( series.length > 5 ) {
-      alert('No puedes agregar mas de 5 puntos.');
+      series.pop();
+      onError('No puedes agregar mas de 5 puntos.');
     }
     else {
       onSeriesChange(series)
@@ -23,19 +26,29 @@ const DataForm = ({ onSeriesChange }) => {
   }, [series]);
 
   const clearSeries = () => {
+    setError('');
     setSeries([]);
+  }
+
+  async function onError ( message ) {
+    setError(message);
+    clearTimeout(errorTime);
+    setErrorTime(setTimeout(() => {setError('')}, 4000));
   }
 
   return (
     <div className="DataForm">
       <p className="text">Acá puedes introducir los datos :)</p>
-      <PointForm
-        onAddPoint={(point) => { setSeries( series.concat(point) ) }}
-      />
+      <div className="inline">
+        <PointForm
+          onAddPoint={(point) => { setSeries( series.concat(point) ) }}
+        />
+        <p className="error">{error}</p>
+      </div>
       <div className="inline">
         <p className="text">
           Tu serie de datos es: 
-          { series.map( p => <span className="data-point">({p.x},{p.y})</span> ) }
+          { series.slice(0,5).map( (p, index) => <span className="data-point" key={index}>({p.x},{p.y})</span> ) }
         </p>
         <button className="clear-all" onClick={clearSeries}>Borrar todo</button>
       </div>

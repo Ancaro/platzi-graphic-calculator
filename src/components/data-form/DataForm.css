@@ -7,3 +7,9 @@
 .DataForm .clear-all {
     margin-left: var(--space);
 }
+
+.DataForm .error {
+    align-self: center;
+    margin-left: var(--space);
+    color: red;
+}
