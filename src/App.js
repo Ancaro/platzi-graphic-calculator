@@ -19,7 +19,7 @@ function App() {
       
       <div className="header wrapper">
         <h1 className="title--green">Graphic calculator</h1>
-        <h2 className="subtitle--green">Platzi Master assesment</h2>
+        <h2 className="subtitle--green">Platzi Master assessment</h2>
       </div>
 
       <div className="data-form-wrapper wrapper">
