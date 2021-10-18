@@ -12,39 +12,7 @@ import './App.css';
 
 function App() {
 
-  const [seriesData, setSeriesData] = useState({});
   const [series, setSeries] = useState([]);
-
-  // const data = {
-  //   labels: [1.1, 2.7, 33, 4],
-  //   datasets: [
-  //     {
-  //       label: 'Popularity of colours',
-  //       data: [55, -23, 96, -100],
-  //       backgroundColor: [
-  //         '#95ca3e',
-  //         'rgb(18, 31, 61)',
-  //       ],
-  //       borderWidth: 1,
-  //     }
-  //   ]
-  // }
-
-  useEffect(() => {
-    const labels = [];
-    const data = [];
-    series.forEach(point => {
-      labels.push(point.x);
-      data.push(point.y);
-    });
-    setSeriesData({
-      labels: labels,
-      datasets: [{
-        // label: 'points',
-        data: data,
-      }],
-    });
-  }, [seriesData])
 
   return (
     <div className="App">
@@ -62,7 +30,7 @@ function App() {
 
       <div className="chart-wrapper wrapper">
         <Chart 
-          seriesData={seriesData}
+          series={series}
         />
       </div>
     </div>
