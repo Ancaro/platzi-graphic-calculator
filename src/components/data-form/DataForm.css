@@ -1,0 +1,9 @@
+
+.DataForm .data-point {
+    font-weight: 700;
+    margin-left: var(--space-half);
+}
+
+.DataForm .clear-all {
+    margin-left: var(--space);
+}

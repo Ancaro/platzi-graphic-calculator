@@ -15,6 +15,7 @@
   --platzi-primary-bg: linear-gradient(87deg,#95ca3e,#85c638);
   --platzi-primary-color: #95ca3e;
   --platzi-secondary-color: rgb(18, 31, 61);
+  --platzi-secondary-color-light: rgb(68, 81, 121);
 
   /* Spaces */
   --space: 16px;
@@ -29,6 +30,18 @@
 body {
   background-color: var(--neutral-color);
   font-family: var(--primary-font);
+}
+
+button {
+  background-color: var(--platzi-secondary-color);
+  color: var(--platzi-primary-color);
+  border: 2px solid var(--platzi-secondary-color-light);
+  font-weight: 700;
+  padding: 0 var(--space-half);
+}
+button:hover {
+  background-color: var(--platzi-secondary-color-light);
+  cursor: pointer;
 }
 
 .title, [class^='title'] {
@@ -57,4 +70,9 @@ body {
   box-shadow: var(--shadow-1);
   margin-bottom: var(--space-x2);
   padding: var(--space);
+}
+
+.inline {
+  display: flex;
+  justify-content: flex-start;
 }

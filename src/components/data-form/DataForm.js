@@ -22,12 +22,23 @@ const DataForm = ({ onSeriesChange }) => {
     }
   }, [series]);
 
+  const clearSeries = () => {
+    setSeries([]);
+  }
+
   return (
     <div className="DataForm">
       <p className="text">Acá puedes introducir los datos :)</p>
       <PointForm
         onAddPoint={(point) => { setSeries( series.concat(point) ) }}
       />
+      <div className="inline">
+        <p className="text">
+          Tu serie de datos es: 
+          { series.map( p => <span className="data-point">({p.x},{p.y})</span> ) }
+        </p>
+        <button className="clear-all" onClick={clearSeries}>Borrar todo</button>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,17 @@
+
+.PointForm {
+    margin: var(--space) 0;
+    display: flex;
+    padding: var(--space-half);
+    width: fit-content;
+    background-color: var(--platzi-primary-color);
+}
+
+.PointForm .point {
+    display: flex;
+    margin-right: var(--space);
+}
+
+.PointForm .point input {
+    width: var(--space-x2);
+}
